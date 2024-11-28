@@ -61,6 +61,7 @@ def get_probabilities_h():
 def draw_omikuji(month, day):
     if month == day:
         nakami, probabilities = get_probabilities_h()
+    
     else:
         #月と日を足し合わせる
         total = month + day
@@ -93,8 +94,11 @@ if __name__== "__main__":
     try:
         print("月を入力してください（1~12の整数）:")
         month = int(input().strip())
+        print(f"{month}")
+        
         print("日にちを入力してください（1~31の整数）:")
         day = int(input().strip())
+        print(f"{day}")
         if 1 <= month <= 12 and 1 <= day <= 31:
             print("おみくじを引きます...")
             draw_omikuji(month ,day)
