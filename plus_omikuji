@@ -2,6 +2,7 @@
 #SPDX-FileCopyrightText: 2024 Hyuta Sasaki 
 #SPDX-Licence-Indentifier: BSD-3-Clause
 import random
+import sys
 
 def get_probabilities_a():
     #　おみくじの確率
@@ -91,22 +92,23 @@ def draw_omikuji(month, day):
     result = random.choices(nakami, probabilities)[0]
     print(f"今日の運勢は: {result}")
 
-if __name__== "__main__":
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("使用方法: ./plus_omikuji MM/DD")
+        sys.exit(1)
+
     try:
-        print("月を入力してください（1~12の整数）:")
-        month = int(input().strip())
-        print(f"{month}")
-        
-        print("日にちを入力してください（1~31の整数）:")
-        day = int(input().strip())
-        print(f"{day}")
+        date = sys.argv[1]
+        month, day = map(int,date.split("/"))
+
         if 1 <= month <= 12 and 1 <= day <= 31:
+            print(f"入力された日付:{month}/{day}")
             print("おみくじを引きます...")
             draw_omikuji(month ,day)
         else:
             print("月は1~12、日にちは1~31の範囲で入力してください。")
 
     except ValueError:
-        print("無効な入力です。整数を入力してください。")
+        print("無効な入力です。MM/DDの形式で入力してください。")
 
 
