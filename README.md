@@ -4,7 +4,7 @@
 
 # plus＿omikujiコマンドの概要
 
-[![test](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml/badge.svg)]](https://github.com/Hyuman05/robosys2024/blob/main/.github/workflows/test2.yml)
+[![test](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml/badge.svg)](https://github.com/Hyuman05/robosys2024/blob/main/.github/workflows/test2.yml)
 
 一日の運勢をおみくじで教えてくれるプログラムです。
 
@@ -14,7 +14,7 @@
 下記のコマンドでリポジトリのクローンを行ってください
 
 ```
-git clone https://github.com/Hyuman05/robosys2024.git]
+git clone https://github.com/Hyuman05/robosys2024
 ```
 
 その後下記のコマンドでディレクトリに移動してください
