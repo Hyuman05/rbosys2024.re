@@ -1,4 +1,4 @@
-#!/usr/bin/bash -v
+#!/usr/bin/bash -
 #SPDX-FileCopyrightText: 2024 Hyuta Sasaki 
 #SPDX-Licence-Indentifier: BSD-3-Clause
 ng () {
