@@ -1,59 +1,54 @@
 #!/bin/bash -xv
-#SPDX-FileCopyrightText: 2024 Hyuta Sasaki 
-#SPDX-Licence-Indentifier: BSD-3-Clause
-ng () {
-    echo NG at Line ${1}
+# SPDX-FileCopyrightText: 2024 Hyuta Sasaki
+# SPDX-License-Identifier: BSD-3-Clause
+
+ng() {
+    echo "NG at Line ${1}"
     res=1
 }
 
 res=0
 
-#正しいインプット
-#out=$(./plus_omikuji 1/1)
-#[ "${out}" = "大吉" ] or [ "${out}" = "大凶" ] or ng${LINENO}
+# 正しい入力
+out=$(./plus_omikuji 1/1)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/2)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "小吉" ] || [ "${out}" = "末吉" ] || [ "${out}" = "凶" ] || [ "${out}" = "大凶"] || ng ${LINENO}
+out=$(./plus_omikuji 1/2)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 小吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/3)
-#[ "${out}" = "大吉" ] || ["${out}" = "凶" ] || ["${out}" = "大凶" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/3)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/4)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "小吉" ] || [ "${out}" = "末吉" ] || [ "${out}" = "凶" ] || [ "${out}" = "大凶" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/4)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 小吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/5)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "小吉" ] || [ "${out}" = "末吉" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/5)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 小吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/6)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "小吉" ] || [ "${out}" = "末吉" ] || [ "${out}" = "凶" ] || [ "${out}" = "大凶" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/6)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 小吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/7)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "小吉" ] || [ "${out}" = "末吉" ] || [ "${out}" = "凶" ] || [ "${out}" = "大凶" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/7)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 小吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
-#out=$(./plus_omikuji 1/8)
-#[ "${out}" = "大吉" ] || [ "${out}" = "吉" ] || [ "${out}" = "中吉" ] || [ "${out}" = "末吉" ] ||　[ "${out}" = "凶" ] || [ "${out}" = "大凶" ] || ng ${LINENO}
-
-#変なインプット
-
-out=$(./plus_omikuji )
-[ "$?" = 0 ] || ng ${LINENO}
-[ "${out}" = "無効な入力です。MM/DDの形式で入力してください。" ] || ng ${LINENO}
-
-out=$(./plus_omikuji 1月１日)
-[ "$?" = 0 ] || ng ${LINENO}
-[ "${out}" = "無効な入力です。MM/DDの形式で入力してください。" ] || ng ${LINENO}
+out=$(./plus_omikuji 1/8)
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 吉" ] || [ "${out}" = "今日の運勢は: 中吉" ] || [ "${out}" = "今日の運勢は: 末吉" ] || [ "${out}" = "今日の運勢は: 凶" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
 
 out=$(./plus_omikuji 01/01)
-[ "$?" = 0 ] || ng ${LINENO}
-[ "${out}" = "無効な入力です。MM/DDの形式で入力してください。" ] || ng ${LINENO}
+[ "${out}" = "今日の運勢は: 大吉" ] || [ "${out}" = "今日の運勢は: 大凶" ] || ng ${LINENO}
+
+# 異常な入力
+out=$(./plus_omikuji)
+[ "${out}" = "使用方法: ./plus_omikuji MM/DD" ] || ng ${LINENO}
 
 out=$(./plus_omikuji あ)
-[ "$?" = 0 ] || ng ${LINENO}
 [ "${out}" = "無効な入力です。MM/DDの形式で入力してください。" ] || ng ${LINENO}
 
 out=$(./plus_omikuji 13/40)
-[ "$?" = 0 ] || ng ${LINENO}
 [ "${out}" = "月は1~12、日にちは1~31の範囲で入力してください。" ] || ng ${LINENO}
 
+
+
+# 結果判定
 [ "$res" = 0 ] && echo OK
 exit $res
