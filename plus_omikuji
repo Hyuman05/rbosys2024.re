@@ -102,8 +102,6 @@ if __name__ == "__main__":
         month, day = map(int,date.split("/"))
 
         if 1 <= month <= 12 and 1 <= day <= 31:
-            print(f"入力された日付:{month}/{day}")
-            print("おみくじを引きます...")
             draw_omikuji(month ,day)
         else:
             print("月は1~12、日にちは1~31の範囲で入力してください。")
