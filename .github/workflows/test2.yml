@@ -1,4 +1,4 @@
-    name: Test1
+    name: test
     on: push
     jobs:
       test:
@@ -6,8 +6,7 @@
         strategy:
           matrix:
             python-version: ["3.7", "3.8", "3.9", "3.10"]
-        steps:
-        - uses: action/checkout@v3
+        step:
+        - uses: actions/checkout@v3
         - name: ALL test
           run: bash -xv ./test2.bash
-
