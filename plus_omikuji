@@ -93,12 +93,12 @@ def draw_omikuji(month, day):
     print(f"今日の運勢は: {result}")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("使用方法: ./plus_omikuji MM/DD")
-        sys.exit(1)
-
     try:
-        date = sys.argv[1]
+        if len(sys.argv) > 1:
+            date= sys.argv[1]
+        else:
+            date= sys.stdin.readline().strip()
+            
         month, day = map(int,date.split("/"))
 
         if 1 <= month <= 12 and 1 <= day <= 31:
