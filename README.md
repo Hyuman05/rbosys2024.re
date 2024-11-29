@@ -94,7 +94,7 @@ echo 13/14 |./omikuji
 - Ubuntu 22.04 LTS
 
 # ライセンス
-- このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布>および使用が許可されます。
+- このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布および使用が許可されます。
 
 - このパッケージのplus_omikuji,test2.bash以外のコードは下記スライド（CC-BY-SA 4.0 by ryuichi ueda）のものを、本人の許可を得て自身の著作としたものです。
   - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024
