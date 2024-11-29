@@ -3,8 +3,8 @@
 ロボットシステム学の練習リポジトリ
 
 # plus＿omikujiコマンドの概要
-
-[![test](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml/badge.svg)](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml)
+[![test](https://github.com/Hyuman05/robosys2024/action/workflows/test2.yml/badge.svg)]
+(https://github.com/Hyuman05/roobosys2024/action/workflows/test2.yml)
 
 一日の運勢をおみくじで教えてくれるプログラムです。
 
@@ -25,11 +25,11 @@ cd robosys2024
 
 # 使い方
 
-`plus_omikuji`は以下の入力方法に対応しています:
+`omikuji`は以下の入力方法に対応しています:
 
 - 月と日を入力（数字での入力）
 ```
-echo 月/日 | ./plus_omikuji
+echo 月/日 | ./omikuji
 ```
 
 のように入力してください。
@@ -38,7 +38,7 @@ echo 月/日 | ./plus_omikuji
 また
 
 ```
-echo 01/01 |./plus_omikuji
+echo 01/01 |./omikuji
 ```
 
 のように、0を入れても1/1として実行されます。
@@ -49,17 +49,17 @@ echo 01/01 |./plus_omikuji
 以下の例では、1月1日の標準入力で、実行しています。
 
 ```
-$echo 1/1 |./plus_omikuji
+$echo 1/1 |./omikuji
 今日の運勢は: 大吉
 ```
 
 ```
-$echo 01/01 |./plus_omikuji
+$echo 01/01 |./omikuji
 今日の運勢は: 大吉
 ```
 
 ```
-$echo １/１ |./plus_omikuji
+$echo １/１ |./omikuji
 今日の運勢は: 大吉
 ```
 
@@ -68,19 +68,19 @@ $echo １/１ |./plus_omikuji
 
 空白
 ```
-echo  |./plus_omikuji
+echo  |./omikuji
 無効な入力です。MM/DDの形式で入力してください。
 ```
 
 文字
 ```
-echo a |./plus_omikuji
+echo a |./omikuji
 無効な入力です。MM/DDの形式で入力してください。
 ```
 
 存在しない日にち
 ```
-echo 13/14 |./plus_omikuji
+echo 13/14 |./omikuji
 月は1~12、日にちは1~31の範囲で入力してください。
 ```
 - 補足
@@ -92,12 +92,12 @@ echo 13/14 |./plus_omikuji
     - テスト済み:3.7~3.10
 
 ## テスト環境
-- Ubuntu-latest\Ubuntu-22.04.5LTS
+- Ubuntu 22.04 LTS
 
 # ライセンス
 - このソフトウェアパッケージは、３条項BSDライセンスの下、再頒布>および使用が許可されます。
 
-- このパッケージのplus_omikuji,test2.bash以外のコードは下記スラ>イド（CC-BY=SA 4.0 by ryuichi ueda）のものを、本人の許可を得て自身の著作としたものです。
+- このパッケージのplus_omikuji,test2.bash以外のコードは下記スラ>イド（CC-BY-SA 4.0 by ryuichi ueda）のものを、本人の許可を得て自身の著作としたものです。
   - https://github.com/ryuichiueda/slides_marp/tree/master/robosys2024
 
 © 2024 Hyuta Sasaki
