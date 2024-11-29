@@ -2,13 +2,13 @@
 
 ロボットシステム学の練習リポジトリ
 
-# omikujiコマンドの概要
+## omikujiコマンドの概要
 [![test](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml/badge.svg)](https://github.com/Hyuman05/robosys2024/actions/workflows/test2.yml)
 
 一日の運勢をおみくじで教えてくれるプログラムです。
 
 標準入力に日付（月・日）を入力すると、プログラムに組み込まれている確率の元、大吉、吉、中吉、小吉、末吉、凶、大凶と出力されます。
-#準備
+## 準備
 
 下記のコマンドでリポジトリのクローンを行ってください
 
@@ -22,7 +22,7 @@ git clone https://github.com/Hyuman05/robosys2024
 cd robosys2024
 ```
 
-# 使い方
+## 使い方
 
 `omikuji`は以下の入力方法に対応しています:
 
@@ -61,10 +61,6 @@ $echo 01/01 |./omikuji
 $echo １/１ |./omikuji
 今日の運勢は: 大吉
 ```
-
-異常な入力
-以下の例では、異常な入力がされたときの応答
-
 空白
 ```
 echo  |./omikuji
