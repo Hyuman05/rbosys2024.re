@@ -2,7 +2,7 @@
 
 ロボットシステム学の練習リポジトリ
 
-# plus＿omikujiコマンドの概要
+# omikujiコマンドの概要
 [![test](https://github.com/Hyuman05/robosys2024/action/workflows/test2.yml/badge.svg)]
 (https://github.com/Hyuman05/roobosys2024/action/workflows/test2.yml)
 
