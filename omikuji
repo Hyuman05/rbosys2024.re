@@ -103,10 +103,17 @@ if __name__ == "__main__":
 
         if 1 <= month <= 12 and 1 <= day <= 31:
             draw_omikuji(month ,day)
+            sys.exit(0) #正常終了
         else:
             print("月は1~12、日にちは1~31の範囲で入力してください。")
+            sys.exit(1) #異常終了
 
     except ValueError:
         print("無効な入力です。MM/DDの形式で入力してください。")
+        sys.exit(1) #異常終了
+
+    except Exception as e:
+        print(f"予期しないエラーが発生しました: {e}", file=sys.stderr)
+        sys.exit(2) #想定外のエラー
 
 
